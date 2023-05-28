@@ -1,6 +1,6 @@
 import pygame as PG, random as RA
 from pygame.locals import *
-
+#Cambio en codigo a ver si funcionana 
 #Constantes globales
 nRES = (1000,700); nTW_X = nTH_Y = 32 ; lOK = True 
 
