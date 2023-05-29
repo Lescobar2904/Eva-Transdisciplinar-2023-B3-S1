@@ -35,7 +35,7 @@ def Img_Init():
     aImg.append(Load_Image('T00.png',False )) 
     aImg.append(Load_Image('T02.png',False ))
     aImg.append(Load_Image('T07.png',False )) 
-    aImg.append(Load_Image('BKG2.png',False )) 
+    aImg.append(Load_Image('BKG2.png',False ))
     return aImg
 
 #Crea mapa
@@ -63,8 +63,12 @@ def Pinta_Mapas():
     sPanta.blit(sMap_1.subsurface((0,0,849,467)),(381,0))
     sPanta.blit(sMap_2.subsurface((0,0,372,900)),(0,-100))
     sPanta.blit(sMap_3.subsurface((0,0,849,322)),(381,476))
+    sPanta.blit(sMap_4.subsurface((0,0,203,99)),(0,0))
+    sPanta.blit(sMap_5.subsurface((0,0,153,74)),(0,630))
+    sPanta.blit(sMap_6.subsurface((0,0,372,178)),(0,430))
+    sPanta.blit(sMap_7.subsurface((0,0,255,93)),(581,180))
+    sPanta.blit(sMap_8.subsurface((0,0,619,112)),(381,476))
     return
-
 
 #Display Main
 sPanta = PyGame_Init(); 
@@ -76,7 +80,23 @@ aSprt = Img_Init()
 sInfo  = Get_Surface(0345,0230); 
 sMap_1 = Get_Surface(3840,1920); 
 sMap_2 = Get_Surface(1920,3200); 
-sMap_3 = Get_Surface(1920,1920); 
+sMap_3 = Get_Surface(1920,1920);
+sMap_4 = Get_Surface(1000,1000);
+sMap_5 = Get_Surface(1000,1000);
+sMap_6 = Get_Surface(1000,1000);
+sMap_7 = Get_Surface(1000,1000);
+sMap_8 = Get_Surface(1000,1000);
+#Botones
+Img = Load_Image('Formula.png',False)
+Img2 = Load_Image('start.png',False)
+Img3 = Load_Image('Valores.png',False)
+Img4 = Load_Image('Simu.png',False)
+Img5 = Load_Image('Formas.png',False)
+sMap_4.blit(Img,(0,0))
+sMap_5.blit(Img2,(0,0))
+sMap_6.blit(Img3,(0,0))
+sMap_7.blit(Img4,(0,0))
+sMap_8.blit(Img5,(0,0))
 
 aMapTi_1 = Get_Tiles(3840,1920,(0,0)); Make_Mapa(sMap_1,aMapTi_1,(3840,1920)) 
 aMapTi_2 = Get_Tiles(1920,3200,(1,1)); Make_Mapa(sMap_2,aMapTi_2,(1920,3200)) 
