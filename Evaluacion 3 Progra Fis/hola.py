@@ -1,8 +1,15 @@
 import tkinter as tk
 import pygame as pg
+nRES=(750,400)
+pg.init()
+pg.display.set_caption('Energia potencial gravitacional')
+pg.display.set_mode(nRES)
 
 ventana  =  tk.Tk()
 ventana.geometry("1000x700")
+
+fondore = tk.Label(ventana, text="", bg= "sky blue")
+fondore.place(x=0, y=0, width=1000, height=700)
 
 boton1= tk.Button(ventana, text = "Empieza", bg = "green")
 boton2= tk.Button(ventana, text = "Forma 1", bg = "yellow")
