@@ -10,7 +10,8 @@ ventana.geometry("1000x700")
 ima_emp = tk.PhotoImage(file="start.png")
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
-ima_emp4 = tk.PhotoImage(file="fpulentox.png")
+ima_emp4 = tk.PhotoImage(file="overa.png")
+
 
 fondore = tk.Label(ventana, image=ima_emp4)
 fondore.place(x=0, y=0, width=1000, height=700)
