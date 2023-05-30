@@ -1,12 +1,13 @@
 import tkinter as tk
 import pygame as pg
-nRES=(750,400)
-pg.init()
-pg.display.set_caption('Energia potencial gravitacional')
-pg.display.set_mode(nRES)
-
+from PIL import ImageTk
 ventana  =  tk.Tk()
 ventana.geometry("1000x700")
+nRES=(750,400)
+pg.init()
+pg.display.set_mode(nRES)
+
+
 ima_emp = tk.PhotoImage(file="start.png")
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
