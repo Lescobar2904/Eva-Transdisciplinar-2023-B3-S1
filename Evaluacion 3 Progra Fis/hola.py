@@ -12,7 +12,7 @@ ima_emp  = tk.PhotoImage(file="start.png")
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="overa.png")
-
+ima_emp5 = tk.PhotoImage(file="Reset.png")
 #----------------------------------------
 # interfaz y ventana
 #----------------------------------------
@@ -46,7 +46,7 @@ def formula():
 
 
 #-------------------------------------------------
-# entradas de tecto
+# entradas de texto
 #-------------------------------------------------
 
 m2 = tk.Entry(ventana, bg= "pink")
@@ -65,7 +65,7 @@ h2.place(x=50, y=575, width=50, height=20)
 boton1= tk.Button(ventana, image=ima_emp, command=formula)
 boton2= tk.Button(ventana, text = "Forma 1", bg = "yellow")
 boton3= tk.Button(ventana, text = "Forma 2", bg = "yellow")
-boton4= tk.Button(ventana, image=ima_emp)
+boton4= tk.Button(ventana, image=ima_emp5)
 
 boton1.place(x=0,   y=630, width=153, height=74)
 boton2.place(x=386, y=476, width=291, height=112)
