@@ -13,6 +13,7 @@ ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="overa.png")
 ima_emp5 = tk.PhotoImage(file="Reset.png")
+
 #----------------------------------------
 # interfaz y ventana
 #----------------------------------------
@@ -38,11 +39,27 @@ ecua.place(x=0, y=0, width=203, height=99)
 #------------------------------------------------
 
 def formula():
-    m = m2.get()
-    g = g2.get()
-    h = h2.get()
-    resu = int(m) * int(g) * int(h)
-    return resu
+    try:
+        m = m2.get()
+        g = g2.get()
+        h = h2.get()
+        resu = int(m) * int(g) * int(h)
+        return resu
+    except:
+        men = tk.Entry(ventana, bg= "orange")
+        men.place(x=110, y=550, width=250, height=20)
+        men.insert(0,"datos incorrectos, presione RESET e intentelo")
+        men = tk.Entry(ventana, bg= "orange")
+        men.place(x=110, y=570, width=60, height=20)
+        men.insert(0,"de nuevo")
+        return
+
+def del_form():
+    m2.delete(0, 'end')
+    g2.delete(0, 'end')
+    h2.delete(0, 'end')
+
+
 
 
 #-------------------------------------------------
@@ -65,7 +82,7 @@ h2.place(x=50, y=575, width=50, height=20)
 boton1= tk.Button(ventana, image=ima_emp, command=formula)
 boton2= tk.Button(ventana, text = "Forma 1", bg = "yellow")
 boton3= tk.Button(ventana, text = "Forma 2", bg = "yellow")
-boton4= tk.Button(ventana, image=ima_emp5)
+boton4= tk.Button(ventana, image=ima_emp5, command=del_form)
 
 boton1.place(x=0,   y=630, width=153, height=74)
 boton2.place(x=386, y=476, width=291, height=112)
