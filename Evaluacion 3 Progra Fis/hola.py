@@ -55,14 +55,18 @@ def formula():
         dele.insert(0,"de nuevo")
         return
 
+#------------------------------------------------
+# funcion de RESET
+#------------------------------------------------
+
 def del_form():
     try:
         global men, dele
         m2.delete(0, 'end')
         g2.delete(0, 'end')
         h2.delete(0, 'end')
-        men.delete(0,'end')
-        dele.delete(0,'end')
+        dele.destroy()
+        men.destroy()
     except:
         print("miau")
 
