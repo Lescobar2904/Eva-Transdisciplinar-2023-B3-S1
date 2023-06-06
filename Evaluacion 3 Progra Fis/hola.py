@@ -46,19 +46,25 @@ def formula():
         resu = int(m) * int(g) * int(h)
         return resu
     except:
+        global men, dele
         men = tk.Entry(ventana, bg= "orange")
         men.place(x=110, y=550, width=250, height=20)
         men.insert(0,"datos incorrectos, presione RESET e intentelo")
-        men = tk.Entry(ventana, bg= "orange")
-        men.place(x=110, y=570, width=60, height=20)
-        men.insert(0,"de nuevo")
+        dele = tk.Entry(ventana, bg= "orange")
+        dele.place(x=110, y=570, width=60, height=20)
+        dele.insert(0,"de nuevo")
         return
 
 def del_form():
-    m2.delete(0, 'end')
-    g2.delete(0, 'end')
-    h2.delete(0, 'end')
-
+    try:
+        global men, dele
+        m2.delete(0, 'end')
+        g2.delete(0, 'end')
+        h2.delete(0, 'end')
+        men.delete(0,'end')
+        dele.delete(0,'end')
+    except:
+        print("miau")
 
 
 
