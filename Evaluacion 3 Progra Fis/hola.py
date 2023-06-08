@@ -3,28 +3,24 @@ import pygame as pg
 from PIL import ImageTk
 ventana  =  tk.Tk()
 ventana.geometry("1000x700")
+ventana.resizable(0,0)
 nRES=(750,400)
 pg.init()
 pg.display.set_mode(nRES)
 
 
-ima_emp = tk.PhotoImage(file="start.png")
+ima_emp  = tk.PhotoImage(file="start.png")
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="overa.png")
 ima_emp5 = tk.PhotoImage(file="Reset.png")
 
+#------------------------------------------------
+# interfaz
+#------------------------------------------------
 
 fondore = tk.Label(ventana, image=ima_emp4)
 fondore.place(x=0, y=0, width=1000, height=700)
-
-boton1= tk.Button(ventana, image=ima_emp)
-boton2= tk.Button(ventana, text = "Forma 1", bg = "yellow")
-boton3= tk.Button(ventana, text = "Forma 2", bg = "yellow")
-
-boton1.place(x=0, y=630, width=153, height=74)
-boton2.place(x=381, y=476, width=309, height=112)
-boton3.place(x=700, y=476, width=291, height=112)
 
 li = tk.Label(ventana, text="", bg= "black")
 li.place(x=372, y=0, width=15, height=700)
@@ -37,7 +33,6 @@ f.place(x=0, y=430, width=372, height=178)
 ecua = tk.Label(ventana, image=ima_emp2)
 ecua.place(x=0, y=0, width=203, height=99)
 
-<<<<<<< HEAD
 
 #------------------------------------------------
 # funcion de formula
@@ -81,8 +76,6 @@ def del_form():
 # entradas de texto
 #-------------------------------------------------
 
-=======
->>>>>>> parent of f338e2e (cambio y aplicación de formula)
 m2 = tk.Entry(ventana, bg= "pink")
 m2.place(x=50, y=525, width=50, height=20)
 h2 = tk.Entry(ventana, bg= "pink")
@@ -92,7 +85,6 @@ g2.place(x=50, y=575, width=50, height=20)
 
 
 
-<<<<<<< HEAD
 #---------------------------------------------------
 # botones
 #---------------------------------------------------
@@ -108,7 +100,5 @@ boton3.place(x=700, y=476, width=291, height=112)
 boton4.place(x=200, y=630, width=153, height=74)
 
 
-=======
->>>>>>> parent of f338e2e (cambio y aplicación de formula)
 ventana.mainloop()
 
