@@ -8,7 +8,12 @@ pg.init()
 pg.display.set_mode(nRES)
 
 
+<<<<<<< Updated upstream
 ima_emp = tk.PhotoImage(file="start.png")
+=======
+
+ima_emp  = tk.PhotoImage(file="start.png")
+>>>>>>> Stashed changes
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="overa.png")
