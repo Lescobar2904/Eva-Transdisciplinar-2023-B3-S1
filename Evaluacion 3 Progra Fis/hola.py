@@ -1,19 +1,42 @@
 import tkinter as tk
-import pygame as pg
-from PIL import ImageTk
+import pygame
+from PIL import ImageTk,Image
+
+#------------------------------------------------
+# inicia pygame
+#------------------------------------------------
+
+
+pygame.init()
+ancho = 610
+alto = 460
+superficie = pygame.Surface((ancho,alto))
+datos_bytes_pyga = pygame.image.tostring(superficie, "RGB")
+
+#------------------------------------------------
+# inicia tkinter
+#------------------------------------------------
+
+
 ventana  =  tk.Tk()
 ventana.geometry("1000x700")
 ventana.resizable(0,0)
-nRES=(750,400)
-pg.init()
-pg.display.set_mode(nRES)
+imagen = Image.frombytes('RGB', (ancho, alto), datos_bytes_pyga)
+imagen_tk = ImageTk.PhotoImage(imagen)
 
 
+
+#------------------------------------------------
+# carga de imagenes
+#------------------------------------------------
 ima_emp  = tk.PhotoImage(file="start.png")
 ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="overa.png")
 ima_emp5 = tk.PhotoImage(file="Reset.png")
+
+
+
 
 #------------------------------------------------
 # interfaz
@@ -33,7 +56,8 @@ f.place(x=0, y=430, width=372, height=178)
 ecua = tk.Label(ventana, image=ima_emp2)
 ecua.place(x=0, y=0, width=203, height=99)
 
-
+etiqueta = tk.Label(ventana, image=imagen_tk)
+etiqueta.place(x=388, y=0, width=ancho, height=alto)
 #------------------------------------------------
 # funcion de formula
 #------------------------------------------------
