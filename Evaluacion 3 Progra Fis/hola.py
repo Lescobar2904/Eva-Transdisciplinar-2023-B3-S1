@@ -11,7 +11,7 @@ pygame.init()
 ancho = 610
 alto = 460
 superficie = pygame.Surface((ancho,alto))
-datos_bytes_pyga = pygame.image.tostring(superficie, "RGB")
+
 
 #------------------------------------------------
 # inicia tkinter
@@ -21,9 +21,6 @@ datos_bytes_pyga = pygame.image.tostring(superficie, "RGB")
 ventana  =  tk.Tk()
 ventana.geometry("1000x700")
 ventana.resizable(0,0)
-imagen = Image.frombytes('RGB', (ancho, alto), datos_bytes_pyga)
-imagen_tk = ImageTk.PhotoImage(imagen)
-
 
 
 #------------------------------------------------
@@ -55,9 +52,8 @@ f = tk.Label(ventana, image=ima_emp3)
 f.place(x=0, y=430, width=372, height=178)
 ecua = tk.Label(ventana, image=ima_emp2)
 ecua.place(x=0, y=0, width=203, height=99)
+etiqueta = tk.Label(ventana)
 
-etiqueta = tk.Label(ventana, image=imagen_tk)
-etiqueta.place(x=388, y=0, width=ancho, height=alto)
 #------------------------------------------------
 # funcion de formula
 #------------------------------------------------
@@ -106,7 +102,7 @@ h2 = tk.Entry(ventana, bg= "pink")
 h2.place(x=50, y=550, width=50, height=20)
 g2 = tk.Entry(ventana, bg= "pink")
 g2.place(x=50, y=575, width=50, height=20)
-
+etiqueta.place(x=388, y=0, width=ancho, height=alto)
 
 
 #---------------------------------------------------
@@ -123,6 +119,24 @@ boton2.place(x=386, y=476, width=291, height=112)
 boton3.place(x=700, y=476, width=291, height=112)
 boton4.place(x=200, y=630, width=153, height=74)
 
+def update_image():
+    superficie.fill((0,0,0))
+    #################################
+    pygame.draw.rect(superficie,(255,0,0),pygame.Rect(10,30,60,60))
 
+
+    ########################################
+    datos_bytes_pyga = pygame.image.tostring(superficie, "RGB")
+    imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
+    imagen_tk = ImageTk.PhotoImage(imagen)
+    etiqueta.config(image=imagen_tk)
+    etiqueta.image= imagen_tk
+    
+def update():
+    update_image()
+    ventana.after(1000//60, update)
+
+
+update()
 ventana.mainloop()
 
