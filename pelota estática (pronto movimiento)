@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import pygame
+from pygame.locals import *
+import sys
+
+# -----------
+# Constantes
+# -----------
+
+SCREEN_WIDTH = 640
+SCREEN_HEIGHT = 480
+
+# ------------------------------
+# Clases y Funciones utilizadas
+# ------------------------------
+
+
+# ------------------------------
+# Funcion principal del juego
+# ------------------------------
+
+
+def main():
+    pygame.init()
+
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption("caida libre")
+
+    fondo = pygame.image.load("fondo_B.png").convert()
+    tux = pygame.image.load("tennis.jpg").convert_alpha()
+    tux.set_colorkey([255, 255, 255])
+    tux_pos_x = 200
+    tux_pos_y = 200
+
+    screen.blit(tux, (tux_pos_x, tux_pos_y))
+    screen.blit(fondo, (0, 0))
+    pygame.display.flip()
+
+    tux_pos_x = tux_pos_x - 1
+    if tux_pos_x < 1:
+        tux_pos_x = 550
+
+    screen.blit(fondo, (0, 0))
+    screen.blit(tux, (tux_pos_x, tux_pos_y))
+    pygame.display.flip()
+
+    # el bucle principal del juego
+    while True:
+        # Posibles entradas del teclado y mouse
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+
+
+
+if __name__ == "__main__":
+    main()
