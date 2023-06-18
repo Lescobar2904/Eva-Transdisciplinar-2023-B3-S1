@@ -1,7 +1,7 @@
 import pygame as pg         
 from pygame.locals import *   
 
-#Modelo Funcional para python 2, se esta trabanjo para transformar codigo a python 3
+#Modelo Funcional para python 3 (el problema era el nombre de la imagen si funciona en python 3)
 
 #Inicia Pygame
 pg.init() 
@@ -10,13 +10,14 @@ Win=pg.display.set_mode(nVen)
 pg.display.set_caption("Bola cayendo")
 
 #Funcion para convertir imagen a formato pygame
-def Load_Image(sFile,transp=False):
-    try: image=pg.image.load(sFile)  
+def Load_Image(sFile, transp=False):
+    try: 
+        image= pg.image.load(sFile)  
     except pg.error.message:        
             raise SystemExit.message         
-    image=image.convert()            
+    image= image.convert()            
     if transp:
-        color=image.get_at((0,0))
+        color= image.get_at((0,0))
         image.set_colorkey(color)
     return image
 
