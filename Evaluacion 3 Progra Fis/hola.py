@@ -88,7 +88,7 @@ def del_form():
         dele.destroy()
         men.destroy()
     except:
-        print("miau")
+        print("error")
 
 
 
