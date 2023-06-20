@@ -26,8 +26,8 @@ nPos_X= int(550/2)
 nPos_Y= 0
 
 #Fondo y bola 
-Sprite= Load_Image("bola.png",True) #Carga imagen png
-fondo= Load_Image("piel.PNG") #Carga imagen fondo 
+Sprite= Load_Image("bola1.png",True) #Carga imagen png
+fondo= Load_Image("piel1.PNG") #Carga imagen fondo 
 
 #Funcion para pintar fondo
 def pint_fondo():
