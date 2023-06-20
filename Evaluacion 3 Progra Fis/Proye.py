@@ -7,12 +7,29 @@ from pygame.locals import *
 #------------------------------------------------
 # inicia pygame
 #------------------------------------------------
+#Funcion para convertir imagen a formato pygame
+def Load_Image(sFile, superficie,transp=False):
+    try: 
+        image= pg.image.load(sFile)  
+    except pg.error.message:        
+            raise SystemExit.message         
+    image= image.convert(superficie)            
+    if transp:
+        color= image.get_at((0,0))
+        image.set_colorkey(color)
+    return image
 
 
 pg.init()
 ancho = 610
 alto = 460
 superficie = pg.Surface((ancho,alto))
+pg.display.set_caption("Bola cayendo")
+#Inicia coordenadas de bola
+nPos_X= int(480/2)
+nPos_Y= 0
+#Fondo y bola 
+Sprite= Load_Image("bola1.png",superficie,True) #Carga imagen png
 
 #------------------------------------------------
 # inicia tkinter
@@ -120,28 +137,12 @@ boton2.place(x=386, y=476, width=291, height=112)
 boton3.place(x=700, y=476, width=291, height=112)
 boton4.place(x=200, y=630, width=153, height=74)
 
-#Funcion para convertir imagen a formato pygame
-def Load_Image(sFile, superficie,transp=False):
-    try: 
-        image= pg.image.load(sFile)  
-    except pg.error.message:        
-            raise SystemExit.message         
-    image= image.convert(superficie)            
-    if transp:
-        color= image.get_at((0,0))
-        image.set_colorkey(color)
-    return image
 
 def update_image():
-    superficie.fill((0,0,0))
+    global nPos_X, nPos_Y
+    superficie.fill((255, 205, 197))
     #################################
     #Modelo Funcional para python 3 (el problema era el nombre de la imagen si funciona en python 3)
-    pg.display.set_caption("Bola cayendo")
-    #Inicia coordenadas de bola
-    nPos_X= int(550/2)
-    nPos_Y= 0
-    #Fondo y bola 
-    Sprite= Load_Image("bola1.png",superficie,True) #Carga imagen png
     #fondo= Load_Image("piel1.PNG") #Carga imagen fondo 
     #Funcion para pintar fondo
     #Funcion para pintar bola
@@ -158,10 +159,8 @@ def update_image():
     ev= pg.event.get()
     for e in ev:
         cKey= pg.key.get_pressed()
-        if e.type==pg.QUIT: 
-            lGo=False 
-        elif cKey[pg.K_j]: 
-            nPos_X= int(550/2)
+        if cKey[pg.K_j]: 
+            nPos_X= int(480/2)
             nPos_Y= 0
             atc= True
 
@@ -169,8 +168,6 @@ def update_image():
         nPos_Y += velocidad
         if nPos_Y >= 333:
             atc = False
-
-    pg.display.flip()
     ########################################
     datos_bytes_pyga = pg.image.tostring(superficie, "RGB")
     imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
