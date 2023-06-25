@@ -76,3 +76,16 @@ esta biblioteca es fundamental para el cálculo numérico y científico en Pytho
 
 ## Matplotlib.animation
 Matplotlib.animation nos brinda herramientas para crear animaciones en Python. Podemos generar secuencias de imágenes que se reproducen en secuencia, lo que resulta útil para visualizar cambios a lo largo del tiempo o crear animaciones interactivas. Podemos personalizar aspectos visuales como gráficos, colores y estilos.
+
+
+
+## conclucion
+En este proyecto, hemos explorado y simulado la Energía Potencial Gravitacional, un concepto fundamental en la física descubierto por Isaac Newton. Mediante el uso de Python, tkinter, pygame y el repositorio de GitHub, hemos creado una simulación interactiva que nos permite comprender y visualizar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan y caen.
+
+Durante el proceso, hemos aprendido que la energía potencial gravitacional se basa en la masa de un objeto, su altura relativa y la aceleración debido a la gravedad. Mediante la fórmula "E = m * h * g", podemos cuantificar esta energía y comprender cómo se transforma en energía cinética cuando un objeto cae.
+
+La simulación nos ha permitido experimentar con diferentes configuraciones y observar cómo varía la energía potencial gravitacional en tiempo real. Esto nos ha ayudado a fortalecer nuestra comprensión de este fenómeno físico y a apreciar su importancia en diversas situaciones, desde el movimiento de los cuerpos celestes hasta la generación de energía renovable.
+
+Además, gracias al repositorio de GitHub, hemos tenido la oportunidad de colaborar con nuestros compañeros del grupo, recibir aportes valiosos y mejorar la simulación de manera conjunta. Esta experiencia nos ha mostrado el valor del trabajo en equipo y la comunidad en el ámbito de la programación.
+
+En resumen, este proyecto ha sido una emocionante exploración de la Energía Potencial Gravitacional, brindándonos una mayor comprensión de cómo funciona y su aplicación en diversos contextos. Esperamos que esta simulación y su documentación en este README te inspiren a profundizar en el estudio de la física y te den una base sólida para futuros proyectos relacionados.
