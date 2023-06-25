@@ -9,7 +9,7 @@ Video de avance FIS1102:
 https://drive.google.com/file/d/1Gy861RAWjlAouZZmpvvXOJZb07FHGUGo/view?usp=sharing
 
 
-## Descripcion
+## Descripción
 Este proyecto consiste en una simulación de la Energía Potencial Gravitacional utilizando Python, junto con las bibliotecas tkinter, matplotlib, numpy y pygame.
 
 La Energía Potencial Gravitacional es un concepto fundamental en la física, descubierto por Isaac Newton en el siglo XVII. Esta energía se refiere a la capacidad de un objeto para realizar trabajo debido a su posición relativa a un punto de referencia y a la fuerza gravitacional.
@@ -24,7 +24,7 @@ En el siglo XVII, Isaac Newton realizó un descubrimiento revolucionario al obse
 
 En este proyecto, hemos utilizado Python, junto con las bibliotecas tkinter, matplotlib, numpy, pygame y el repositorio de GitHub, para simular y visualizar la Energía Potencial Gravitacional. A través de la simulación, podrás observar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan o caen en relación a un punto de referencia. Esta simulación nos permite explorar y comprender mejor los principios fundamentales detrás de este fenómeno físico descubierto por Newton hace siglos.
 
-## Matematica Empleada
+## Matemática Empleada
 La fórmula general para el cálculo de la energía potencial depende del tipo de sistema y las fuerzas involucradas. A continuación, se presentan dos formas comunes de energía potencial:
 
 Energía Potencial Gravitatoria (EPG):
@@ -79,7 +79,7 @@ Matplotlib.animation nos brinda herramientas para crear animaciones en Python. P
 
 
 
-## conclucion
+## conclusion
 En este proyecto, hemos explorado y simulado la Energía Potencial Gravitacional, un concepto fundamental en la física descubierto por Isaac Newton. Mediante el uso de Python, tkinter, pygame y el repositorio de GitHub, hemos creado una simulación interactiva que nos permite comprender y visualizar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan y caen.
 
 Durante el proceso, hemos aprendido que la energía potencial gravitacional se basa en la masa de un objeto, su altura relativa y la aceleración debido a la gravedad. Mediante la fórmula "E = m * h * g", podemos cuantificar esta energía y comprender cómo se transforma en energía cinética cuando un objeto cae.
