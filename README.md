@@ -88,7 +88,19 @@ Python (versión 3.x recomendada): Puedes descargar Python desde el sitio oficia
 Bibliotecas requeridas: tkinter, matplotlib, numpy y pygame. Estas bibliotecas se pueden instalar utilizando el administrador de paquetes de Python, pip.
 
 Instalacion:
-1-Clona o descarga el repositorio del proyecto desde el enlace a GitHub: 
+
+1-Clona o descarga el repositorio del proyecto desde el enlace a GitHub: https://github.com/Lescobar2904/Eva-Transdisciplinar-2023-B3-S1/tree/main/Evaluacion%203%20Progra%20Fis
+
+2- Abre Visual Studio Code en tu sistema.
+
+3- Haz clic en "File" (Archivo) en la barra de menú superior y selecciona "Open Folder" (Abrir carpeta). Navega y selecciona la carpeta raíz del proyecto que has clonado previamente.
+
+4- Y ejectuta el programa haciendo click en la parte superior derecha del programa que dice (Ejecutar Archivo de Python) 
+
+
+
+
+
 ## Enlace a un Video Explicatorio del programa 
 Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
 
