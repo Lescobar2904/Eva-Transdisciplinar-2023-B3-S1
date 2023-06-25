@@ -8,8 +8,11 @@ Newton esta se genera cuando un peso que se levanta verticalmente adquiriendo en
 Video de avance FIS1102:
 https://drive.google.com/file/d/1Gy861RAWjlAouZZmpvvXOJZb07FHGUGo/view?usp=sharing
 
+## Breve Historia de la Energia Potencial Gravitacional 
 
+En el siglo XVII, Isaac Newton realizó un descubrimiento revolucionario al observar una manzana caer de un árbol: la Energía Potencial Gravitacional. A través de años de investigación, desarrolló la fórmula "E = m * h * g" para cuantificar esta energía, donde "m" es la masa del objeto, "h" es la altura relativa y "g" es la gravedad. Este descubrimiento sentó las bases para comprender cómo la energía potencial gravitacional se convierte en energía cinética cuando un objeto se mueve verticalmente.
 
+En este proyecto, hemos utilizado Python, junto con las bibliotecas tkinter, matplotlib, numpy, pygame y el repositorio de GitHub, para simular y visualizar la Energía Potencial Gravitacional. A través de la simulación, podrás observar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan o caen en relación a un punto de referencia. Esta simulación nos permite explorar y comprender mejor los principios fundamentales detrás de este fenómeno físico descubierto por Newton hace siglos.
 
 
 ## Herramientas Utilizadas
