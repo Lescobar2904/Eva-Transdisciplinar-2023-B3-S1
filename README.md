@@ -77,8 +77,18 @@ esta biblioteca es fundamental para el cálculo numérico y científico en Pytho
 ## Matplotlib.animation
 Matplotlib.animation nos brinda herramientas para crear animaciones en Python. Podemos generar secuencias de imágenes que se reproducen en secuencia, lo que resulta útil para visualizar cambios a lo largo del tiempo o crear animaciones interactivas. Podemos personalizar aspectos visuales como gráficos, colores y estilos.
 
+## Guia de Instalacion 
 
+Sigue estos pasos para instalar y ejecutar la simulación de Energía Potencial Gravitacional en tu entorno local:
 
+Asegúrate de tener instalado lo siguiente en tu sistema:
+
+Python (versión 3.x recomendada): Puedes descargar Python desde el sitio oficial: https://www.python.org/downloads/
+
+Bibliotecas requeridas: tkinter, matplotlib, numpy y pygame. Estas bibliotecas se pueden instalar utilizando el administrador de paquetes de Python, pip.
+
+Instalacion:
+1-Clona o descarga el repositorio del proyecto desde el enlace a GitHub: 
 ## Enlace a un Video Explicatorio del programa 
 Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
 
