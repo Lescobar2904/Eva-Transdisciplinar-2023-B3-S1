@@ -14,6 +14,36 @@ En el siglo XVII, Isaac Newton realizó un descubrimiento revolucionario al obse
 
 En este proyecto, hemos utilizado Python, junto con las bibliotecas tkinter, matplotlib, numpy, pygame y el repositorio de GitHub, para simular y visualizar la Energía Potencial Gravitacional. A través de la simulación, podrás observar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan o caen en relación a un punto de referencia. Esta simulación nos permite explorar y comprender mejor los principios fundamentales detrás de este fenómeno físico descubierto por Newton hace siglos.
 
+## Matematica Empleada
+La fórmula general para el cálculo de la energía potencial depende del tipo de sistema y las fuerzas involucradas. A continuación, se presentan dos formas comunes de energía potencial:
+
+Energía Potencial Gravitatoria (EPG):
+La energía potencial gravitatoria se calcula utilizando la siguiente fórmula:
+EPG = m * g * h
+
+Donde:
+
+EPG es la energía potencial gravitatoria.
+m es la masa del objeto.
+g es la aceleración debida a la gravedad.
+h es la altura del objeto respecto a un nivel de referencia.
+Energía Potencial Elástica (EPE):
+La energía potencial elástica está asociada con la deformación de objetos elásticos, como resortes. Se calcula mediante la siguiente fórmula:
+EPE = (1/2) * k * x^2
+
+Donde:
+
+EPE es la energía potencial elástica.
+k es la constante elástica del resorte.
+x es la deformación del resorte desde su posición de equilibrio.
+Resolución y aplicación:
+El cálculo de la energía potencial implica identificar el sistema en cuestión y determinar las fuerzas y variables relevantes. Una vez conocidos estos datos, se aplican las fórmulas mencionadas anteriormente para obtener el valor de la energía potencial en el sistema.
+
+La energía potencial tiene numerosas aplicaciones en diversas áreas. Algunos ejemplos incluyen:
+
+Estudio de objetos en campos gravitatorios: Permite comprender y predecir el movimiento de objetos en la Tierra y en el espacio.
+Análisis de sistemas elásticos: Ayuda a comprender el comportamiento de resortes, sistemas
+
 
 ## Herramientas Utilizadas
 
