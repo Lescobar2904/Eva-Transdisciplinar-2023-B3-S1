@@ -79,6 +79,12 @@ Matplotlib.animation nos brinda herramientas para crear animaciones en Python. P
 
 
 
+## Enlace a un Video Explicatorio del programa 
+Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
+
+Video de avance FIS1102:
+https://drive.google.com/file/d/1Gy861RAWjlAouZZmpvvXOJZb07FHGUGo/view?usp=sharing
+
 ## conclusion
 En este proyecto, hemos explorado y simulado la Energía Potencial Gravitacional, un concepto fundamental en la física descubierto por Isaac Newton. Mediante el uso de Python, tkinter, pygame y el repositorio de GitHub, hemos creado una simulación interactiva que nos permite comprender y visualizar cómo cambia la energía potencial gravitacional a medida que los objetos se elevan y caen.
 
