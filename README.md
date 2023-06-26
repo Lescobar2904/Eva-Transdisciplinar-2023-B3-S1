@@ -108,10 +108,20 @@ Instalacion:
 
 [![4.png](https://i.postimg.cc/XvYDw2QP/4.png)](https://postimg.cc/yD2PKTqh)
 
-3- ahora haz click en [Forma 1] o [Forma 2] para elegir la simulacion a ejectutar en este caso ejecutaremos la [Forma 1]  una vez hecho click presiona el boton Empezar y comenzara la simulacion
+3- Ahora haz click en [Forma 1] o [Forma 2] para elegir la simulacion a ejectutar en este caso ejecutaremos la [Forma 1]  una vez hecho click presiona el boton Empezar y comenzara la simulacion.
 
-[![12312412.png](https://i.postimg.cc/FsxGFM4L/12312412.png)](https://postimg.cc/JGGjPdtr)
+[![12312412.png](https://i.postimg.cc/KzMjJhNp/12312412.png)](https://postimg.cc/TLTT3SBn)
 
+4- Si quieres ver el Grafico de la simulacion basta con hacer click en boton [Mostrar Grafico] y este te mostrara el caida de la pelota representada graficamente.
+[![Dise-o-sin-t-tulo.png](https://i.postimg.cc/W1q42vRN/Dise-o-sin-t-tulo.png)](https://postimg.cc/qN0rLWMS)
+
+5- Si deseas cambiar los datos de masa, gravedad y altura de la simulacion basta con hacer click en [Reset] y esto reiniciara los valores para que puedas ingresar nuevos datos. 
+[![Dise-o-sin-t-tulo-1.png](https://i.postimg.cc/gc4yhvxw/Dise-o-sin-t-tulo-1.png)](https://postimg.cc/JtDBVHcm)
+
+6- Para salir del programa con el boton [cerrar] en la parte superior derecha de la ventana para que la simulacion termine.
+
+[![Dise-o-sin-t-tulo-2.png](https://i.postimg.cc/K8hnSQVH/Dise-o-sin-t-tulo-2.png)](https://postimg.cc/w7FtD59X)
+ 
 ## Enlace a un Video Explicatorio del programa 
 Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
 
