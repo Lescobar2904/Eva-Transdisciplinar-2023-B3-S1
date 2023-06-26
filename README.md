@@ -108,6 +108,10 @@ Instalacion:
 
 [![4.png](https://i.postimg.cc/XvYDw2QP/4.png)](https://postimg.cc/yD2PKTqh)
 
+3- ahora haz click en [Forma 1] o [Forma 2] para elegir la simulacion a ejectutar en este caso ejecutaremos la [Forma 1]  una vez hecho click presiona el boton Empezar y comenzara la simulacion
+
+[![12312412.png](https://i.postimg.cc/FsxGFM4L/12312412.png)](https://postimg.cc/JGGjPdtr)
+
 ## Enlace a un Video Explicatorio del programa 
 Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
 
