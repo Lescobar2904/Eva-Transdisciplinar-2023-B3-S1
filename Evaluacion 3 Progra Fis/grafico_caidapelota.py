@@ -7,7 +7,7 @@ import numpy as np
 gravedad = float(input("ingrese el valor de Gravedad: "))
 altura_inicial = float(input("ingrese el valor de la Altura inicial: "))
 masa = float(input("ingrese la masa de la pelota: "))
-
+2
 t_inicio = 0
 t_pasos = 0.01
 

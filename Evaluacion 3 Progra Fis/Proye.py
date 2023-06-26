@@ -6,6 +6,10 @@ from pygame.locals import *
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
+
+#------------------------------------------------
+# Grafico de Pelota
+#------------------------------------------------
 def grafico():
     global y, rebote
     gravedad = grav
@@ -89,7 +93,7 @@ ima_emp5 = tk.PhotoImage(file="Reset.png")
 ima_emp6 = tk.PhotoImage(file="AgreVal.png")
 ima_emp7 = tk.PhotoImage(file="Forma10.png")
 ima_emp8 = tk.PhotoImage(file="Forma20.png")
-
+ima_emp9 = tk.PhotoImage(file="MosGraf.png")
 #------------------------------------------------
 # interfaz
 #------------------------------------------------
@@ -237,11 +241,13 @@ boton1= tk.Button(ventana, image=ima_emp, command=update)
 boton1.place(x=0,   y=630, width=153, height=74)
 boton2= tk.Button(ventana, image=ima_emp7, command=Forma1)
 boton2.place(x=386, y=476, width=291, height=112)
-boton3= tk.Button(ventana, image=ima_emp8, command=grafico)
+boton3= tk.Button(ventana, image=ima_emp8, command=Forma2)
 boton3.place(x=700, y=476, width=291, height=112)
 boton4= tk.Button(ventana, image=ima_emp5, command=del_form)
 boton4.place(x=200, y=630, width=153, height=74)
 boton5= tk.Button(ventana, image=ima_emp6, command=formula)
 boton5.place(x=253, y=564, width=100, height=44)
+boton6= tk.Button(ventana, image=ima_emp9, command=grafico)
+boton6.place(x=0, y=120, width=153, height=64)
 
 ventana.mainloop()
