@@ -7,16 +7,14 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
 def grafico():
+    global y, rebote
     gravedad = grav
     altura_inicial = altu
-    masa = masas
     t_inicio = 0
     t_pasos = 0.01
     t_final = np.sqrt(2 * altura_inicial / gravedad)
     t = np.arange(t_inicio, t_final, t_pasos)
-
     y = altura_inicial - 0.5 * gravedad * t**2
-
     fig, ax = plt.subplots()
     ax.set_xlim(0, t_final)
     ax.set_ylim(0, altura_inicial + 1)
@@ -239,7 +237,7 @@ boton1= tk.Button(ventana, image=ima_emp, command=update)
 boton1.place(x=0,   y=630, width=153, height=74)
 boton2= tk.Button(ventana, image=ima_emp7, command=Forma1)
 boton2.place(x=386, y=476, width=291, height=112)
-boton3= tk.Button(ventana, image=ima_emp8, command=Forma2)
+boton3= tk.Button(ventana, image=ima_emp8, command=grafico)
 boton3.place(x=700, y=476, width=291, height=112)
 boton4= tk.Button(ventana, image=ima_emp5, command=del_form)
 boton4.place(x=200, y=630, width=153, height=74)
