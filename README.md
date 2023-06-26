@@ -98,7 +98,11 @@ Instalacion:
 4- Y ejectuta el programa haciendo click en la parte superior derecha del programa que dice (Ejecutar Archivo de Python) 
 
 
+## Guia de uso
 
+1- Al ejecutar la simulación, se abrirá una ventana de interfaz gráfica. Verás un lienzo donde se representarán los objetos y sus movimientos.
+
+[![1.png](https://i.postimg.cc/XJ177ymG/1.png)](https://postimg.cc/nj7t3MHp)
 
 
 ## Enlace a un Video Explicatorio del programa 
