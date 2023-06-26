@@ -3,11 +3,57 @@ import tkinter as tk
 import pygame as pg
 from PIL import ImageTk,Image      
 from pygame.locals import *   
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import numpy as np
+def grafico():
+    gravedad = grav
+    altura_inicial = altu
+    masa = masas
+    t_inicio = 0
+    t_pasos = 0.01
+    t_final = np.sqrt(2 * altura_inicial / gravedad)
+    t = np.arange(t_inicio, t_final, t_pasos)
+
+    y = altura_inicial - 0.5 * gravedad * t**2
+
+    fig, ax = plt.subplots()
+    ax.set_xlim(0, t_final)
+    ax.set_ylim(0, altura_inicial + 1)
+    ax.set_xlabel('Tiempo (s)')
+    ax.set_ylabel('Altura (m)')
+    ax.set_title('Simulación de caída de una pelota')
+    ax.grid(True)
+
+    line, = ax.plot([], [], lw=2)
+    rebote = False
+
+    def init():
+        line.set_data([], [])
+        return line,
+
+    def update(frame):
+        global rebote
+        t = np.arange(t_inicio, frame, t_pasos)
+        y = altura_inicial - 0.5 * gravedad * t**2
+        if rebote:
+            y = altura_inicial - 0.5 * gravedad * (t_final - t)**2
+        else:
+            if len(y) > 0 and np.min(y) <= 0:
+                rebote = True
+        line.set_data(t, y)
+        #verifica si la pelota alcanzo la altura minima
+        altura_minima = 0.1
+        if len(y) > 0 and np.min(y) <= altura_minima:
+            ani.event_source.stop()
+        return line,
+    ani = FuncAnimation(fig, update, frames=np.linspace(t_inicio, t_final, num=200), init_func=init, blit=True, interval = 10)
+    plt.show()
+    return
 
 #------------------------------------------------
 # inicia pygame
 #------------------------------------------------
-#Funcion para convertir imagen a formato pygame
 def Load_Image(sFile, superficie,transp=False):
     try: 
         image= pg.image.load(sFile)  
@@ -24,8 +70,7 @@ ancho = 610
 alto = 460
 superficie = pg.Surface((ancho,alto))
 pg.display.set_caption("Bola cayendo")
-#Fondo y bola 
-Sprite= Load_Image("bola1.png",superficie,True) #Carga imagen png
+Sprite= Load_Image("bola1.png",superficie,True) 
 
 #------------------------------------------------
 # inicia tkinter
@@ -93,6 +138,9 @@ h2 = tk.Entry(ventana, bg= "pink")
 h2.place(x=50, y=575, width=50, height=20)
 etiqueta.place(x=388, y=0, width=ancho, height=alto)
 
+#-------------------------------------------------
+# Pre-visualizado de Formas de animacion
+#-------------------------------------------------
 
 def Forma1(): 
     global nPos_X, nPos_Y
@@ -107,6 +155,7 @@ def Forma1():
     etiqueta.image= imagen_tk
     ventana.after_cancel(pgven)
     return
+
 def Forma2(): 
     global nPos_X, nPos_Y
     superficie.fill((255, 205, 197))
@@ -124,15 +173,15 @@ def Forma2():
 # funcion de formula
 #------------------------------------------------
 def formula():
-    global grav, resul
+    global grav, resul, masas, altu
     try:
         m = m2.get()
         g = g2.get()
         h = h2.get()
-        masa = float(m)
+        masas = float(m)
         grav = float(g)
         altu = float(h)
-        resul = masa * grav * altu
+        resul = masas * grav * altu
         return resul, grav
     except:
         global men, dele
@@ -143,7 +192,9 @@ def formula():
         dele.place(x=110, y=570, width=60, height=20)
         dele.insert(0,"de nuevo")
     return
-
+#------------------------------------------------
+# Animaciones
+#------------------------------------------------
 def update_image():
     global nPos_X, nPos_Y
     superficie.fill((255, 205, 197))
