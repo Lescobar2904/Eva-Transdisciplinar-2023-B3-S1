@@ -43,6 +43,9 @@ ima_emp2 = tk.PhotoImage(file="Formula.png")
 ima_emp3 = tk.PhotoImage(file="Valores.png")
 ima_emp4 = tk.PhotoImage(file="fpulentox.png")
 ima_emp5 = tk.PhotoImage(file="Reset.png")
+ima_emp6 = tk.PhotoImage(file="AgreVal.png")
+ima_emp7 = tk.PhotoImage(file="Forma10.png")
+ima_emp8 = tk.PhotoImage(file="Forma20.png")
 
 #------------------------------------------------
 # interfaz
@@ -84,21 +87,14 @@ def del_form():
 
 m2 = tk.Entry(ventana, bg= "pink")
 m2.place(x=50, y=525, width=50, height=20)
-h2 = tk.Entry(ventana, bg= "pink")
-h2.place(x=50, y=550, width=50, height=20)
 g2 = tk.Entry(ventana, bg= "pink")
-g2.place(x=50, y=575, width=50, height=20)
+g2.place(x=50, y=550, width=50, height=20)
+h2 = tk.Entry(ventana, bg= "pink")
+h2.place(x=50, y=575, width=50, height=20)
 etiqueta.place(x=388, y=0, width=ancho, height=alto)
 
-#---------------------------------------------------
-# botones
-#---------------------------------------------------
-boton3= tk.Button(ventana, text = "Forma 2", bg = "yellow")
-boton4= tk.Button(ventana, image=ima_emp5, command=del_form)
-boton3.place(x=700, y=476, width=291, height=112)
-boton4.place(x=200, y=630, width=153, height=74)
 
-def update_image1(): 
+def Forma1(): 
     global nPos_X, nPos_Y
     superficie.fill((255, 205, 197))
     nPos_X= int(480/2)
@@ -109,6 +105,43 @@ def update_image1():
     imagen_tk = ImageTk.PhotoImage(imagen)
     etiqueta.config(image=imagen_tk)
     etiqueta.image= imagen_tk
+    ventana.after_cancel(pgven)
+    return
+def Forma2(): 
+    global nPos_X, nPos_Y
+    superficie.fill((255, 205, 197))
+    nPos_X= int(480/2)
+    nPos_Y= 200
+    superficie.blit(Sprite,(nPos_X,nPos_Y))
+    datos_bytes_pyga = pg.image.tostring(superficie, "RGB")
+    imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
+    imagen_tk = ImageTk.PhotoImage(imagen)
+    etiqueta.config(image=imagen_tk)
+    etiqueta.image= imagen_tk
+    ventana.after_cancel(pgven)
+    return
+#------------------------------------------------
+# funcion de formula
+#------------------------------------------------
+def formula():
+    global grav, resul
+    try:
+        m = m2.get()
+        g = g2.get()
+        h = h2.get()
+        masa = float(m)
+        grav = float(g)
+        altu = float(h)
+        resul = masa * grav * altu
+        return resul, grav
+    except:
+        global men, dele
+        men = tk.Entry(ventana, bg= "orange")
+        men.place(x=110, y=550, width=250, height=20)
+        men.insert(0,"datos incorrectos, presione RESET e intentelo")
+        dele = tk.Entry(ventana, bg= "orange")
+        dele.place(x=110, y=570, width=60, height=20)
+        dele.insert(0,"de nuevo")
     return
 
 def update_image():
@@ -116,6 +149,22 @@ def update_image():
     superficie.fill((255, 205, 197))
     velocidad= grav
     superficie.blit(Sprite,(nPos_X,nPos_Y))
+    Text=str(resul)
+    black = (0, 0, 0)
+    rose = (255, 205, 197)
+    font = pg.font.Font("freesansbold.ttf", 12)
+    text = font.render("La E.P.G del objeto es la siguiente: ", True, black, rose)
+    text2 = font.render(Text, True, black, rose)  
+    text3 = font.render("Joule", True, black, rose)
+    textRect = text.get_rect()
+    textRec2 = text2.get_rect()
+    textRec3 = text3.get_rect()
+    textRect.center = (110, 30)
+    textRec2.center = (110, 50)
+    textRec3.center = (161, 50)
+    superficie.blit(text, textRect)
+    superficie.blit(text2, textRec2)
+    superficie.blit(text3, textRec3)
     if nPos_Y >= 390:
         velocidad=0
     nPos_Y += velocidad
@@ -127,38 +176,23 @@ def update_image():
     return
 
 def update():
+    global pgven
     update_image()
-    ventana.after(1000//60, update)
+    pgven=ventana.after(1000//60, update)
     return
 
-#------------------------------------------------
-# funcion de formula
-#------------------------------------------------
-def formula():
-    global grav
-    g = h2.get()
-    grav= float(g)
-    update()
-    try:
-        m = m2.get()
-        g = g2.get()
-        h = h2.get()
-        resu = int(m) * int(g) * int(h)
-        return resu
-    except:
-        global men, dele
-        men = tk.Entry(ventana, bg= "orange")
-        men.place(x=110, y=550, width=250, height=20)
-        men.insert(0,"datos incorrectos, presione RESET e intentelo")
-        dele = tk.Entry(ventana, bg= "orange")
-        dele.place(x=110, y=570, width=60, height=20)
-        dele.insert(0,"de nuevo")
-    return
-
-boton1= tk.Button(ventana, image=ima_emp, command=formula)
+#---------------------------------------------------
+# botones
+#---------------------------------------------------
+boton1= tk.Button(ventana, image=ima_emp, command=update)
 boton1.place(x=0,   y=630, width=153, height=74)
-boton2= tk.Button(ventana, text = "Forma 1", bg = "yellow", command=update_image1)
+boton2= tk.Button(ventana, image=ima_emp7, command=Forma1)
 boton2.place(x=386, y=476, width=291, height=112)
-boton3= tk.Button(ventana, text = "Forma 2", bg = "yellow")
+boton3= tk.Button(ventana, image=ima_emp8, command=Forma2)
 boton3.place(x=700, y=476, width=291, height=112)
+boton4= tk.Button(ventana, image=ima_emp5, command=del_form)
+boton4.place(x=200, y=630, width=153, height=74)
+boton5= tk.Button(ventana, image=ima_emp6, command=formula)
+boton5.place(x=253, y=564, width=100, height=44)
+
 ventana.mainloop()
