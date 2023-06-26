@@ -95,6 +95,7 @@ ima_emp6 = tk.PhotoImage(file="AgreVal.png")
 ima_emp7 = tk.PhotoImage(file="Forma10.png")
 ima_emp8 = tk.PhotoImage(file="Forma20.png")
 ima_emp9 = tk.PhotoImage(file="MosGraf.png")
+ima_emp10 = tk.PhotoImage(file="start2.png")
 #------------------------------------------------
 # interfaz
 #------------------------------------------------
@@ -166,7 +167,7 @@ def Forma2():
     nPos2_Y=-75
     nPos3_X=-20
     nPos3_Y= 10
-    superficie.blit(Sprite,(nPos3_X,nPos3_X))
+    superficie.blit(Sprite,(nPos3_X,nPos3_Y))
     superficie.blit(Trig,(nPos2_X,nPos2_Y))
     datos_bytes_pyga = pg.image.tostring(superficie, "RGB")
     imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
@@ -236,7 +237,7 @@ def update_image2():
     global nPos2_X,nPos2_Y,nPos3_X,nPos3_Y
     superficie.fill((255, 205, 197))
     velocidad= grav
-    superficie.blit(Sprite,(nPos3_X,nPos3_X))
+    superficie.blit(Sprite,(nPos3_X,nPos3_Y))
     superficie.blit(Trig,(nPos2_X,nPos2_Y))
     Text=str(resul)
     black = (0, 0, 0)
@@ -293,7 +294,7 @@ boton5= tk.Button(ventana, image=ima_emp6, command=formula)
 boton5.place(x=253, y=564, width=100, height=44)
 boton6= tk.Button(ventana, image=ima_emp9, command=grafico)
 boton6.place(x=0, y=120, width=153, height=64)
-boton7= tk.Button(ventana, image=ima_emp, command=update2)
+boton7= tk.Button(ventana, image=ima_emp10, command=update2)
 boton7.place(x=0,y=330, width=153, height=74)
 
 
