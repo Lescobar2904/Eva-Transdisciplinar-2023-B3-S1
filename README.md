@@ -106,7 +106,7 @@ Instalacion:
 
 2- Ajusta los parámetros de masa, gravedad y altura utilizando las entradas de texto correspondientes (para este ejemplo colocamos en masa 12, en gravedad 9.8 y en altura 40). y despues agregados los valeres presione el boton agregar valores para que estos se guarden al momento de iniciar la simulacion.
 
-[4.png](https://postimg.cc/yD2PKTqh)
+[![4.png](https://i.postimg.cc/XvYDw2QP/4.png)](https://postimg.cc/yD2PKTqh)
 
 ## Enlace a un Video Explicatorio del programa 
 Para una comprensión más profunda del código desarrollado y del fenómeno físico de la Energía Potencial Gravitacional, te invitamos a ver nuestro video explicativo. En este video, ofrecemos una explicación detallada de la implementación del código y una descripción completa del fenómeno que estamos simulando.
