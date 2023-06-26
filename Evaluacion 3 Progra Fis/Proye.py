@@ -73,6 +73,7 @@ alto = 460
 superficie = pg.Surface((ancho,alto))
 pg.display.set_caption("Bola cayendo")
 Sprite= Load_Image("bola1.png",superficie,True) 
+Trig= Load_Image("triangulo.png",superficie,True)
 
 #------------------------------------------------
 # inicia tkinter
@@ -159,11 +160,14 @@ def Forma1():
     return
 
 def Forma2(): 
-    global nPos_X, nPos_Y
+    global nPos2_X,nPos2_Y,nPos3_X,nPos3_Y
     superficie.fill((255, 205, 197))
-    nPos_X= int(480/2)
-    nPos_Y= 200
-    superficie.blit(Sprite,(nPos_X,nPos_Y))
+    nPos2_X=-65 
+    nPos2_Y=-75
+    nPos3_X=-20
+    nPos3_Y= 10
+    superficie.blit(Sprite,(nPos3_X,nPos3_X))
+    superficie.blit(Trig,(nPos2_X,nPos2_Y))
     datos_bytes_pyga = pg.image.tostring(superficie, "RGB")
     imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
     imagen_tk = ImageTk.PhotoImage(imagen)
@@ -228,11 +232,51 @@ def update_image():
     etiqueta.image= imagen_tk
     return
 
+def update_image2():
+    global nPos2_X,nPos2_Y,nPos3_X,nPos3_Y
+    superficie.fill((255, 205, 197))
+    velocidad= grav
+    superficie.blit(Sprite,(nPos3_X,nPos3_X))
+    superficie.blit(Trig,(nPos2_X,nPos2_Y))
+    Text=str(resul)
+    black = (0, 0, 0)
+    rose = (255, 205, 197)
+    font = pg.font.Font("freesansbold.ttf", 12)
+    text = font.render("La E.P.G del objeto es la siguiente: ", True, black, rose)
+    text2 = font.render(Text, True, black, rose)  
+    text3 = font.render("Joule", True, black, rose)
+    textRect = text.get_rect()
+    textRec2 = text2.get_rect()
+    textRec3 = text3.get_rect()
+    textRect.center = (110, 30)
+    textRec2.center = (110, 50)
+    textRec3.center = (161, 50)
+    superficie.blit(text, textRect)
+    superficie.blit(text2, textRec2)
+    superficie.blit(text3, textRec3)
+    if nPos3_Y >= 333:
+        velocidad=0
+    nPos3_Y += velocidad
+    nPos3_X += velocidad
+    datos_bytes_pyga = pg.image.tostring(superficie, "RGB")
+    imagen = Image.frombytes('RGB',  superficie.get_size(), datos_bytes_pyga)
+    imagen_tk = ImageTk.PhotoImage(imagen)
+    etiqueta.config(image=imagen_tk)
+    etiqueta.image= imagen_tk
+    return
+
 def update():
     global pgven
     update_image()
     pgven=ventana.after(1000//60, update)
     return
+
+def update2():
+    global pgven
+    update_image2()
+    pgven=ventana.after(1000//60, update2)
+    return
+
 
 #---------------------------------------------------
 # botones
@@ -249,5 +293,8 @@ boton5= tk.Button(ventana, image=ima_emp6, command=formula)
 boton5.place(x=253, y=564, width=100, height=44)
 boton6= tk.Button(ventana, image=ima_emp9, command=grafico)
 boton6.place(x=0, y=120, width=153, height=64)
+boton7= tk.Button(ventana, image=ima_emp, command=update2)
+boton7.place(x=0,y=330, width=153, height=74)
+
 
 ventana.mainloop()
