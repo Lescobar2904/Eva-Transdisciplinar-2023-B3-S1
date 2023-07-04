@@ -28,17 +28,6 @@ EPG es la energía potencial gravitatoria.
 m es la masa del objeto.
 g es la aceleración debida a la gravedad.
 h es la altura del objeto respecto a un nivel de referencia.
-Energía Potencial Elástica (EPE):
-La energía potencial elástica está asociada con la deformación de objetos elásticos, como resortes. Se calcula mediante la siguiente fórmula:
-EPE = (1/2) * k * x^2
-
-Donde:
-
-EPE es la energía potencial elástica.
-k es la constante elástica del resorte.
-x es la deformación del resorte desde su posición de equilibrio.
-Resolución y aplicación:
-El cálculo de la energía potencial implica identificar el sistema en cuestión y determinar las fuerzas y variables relevantes. Una vez conocidos estos datos, se aplican las fórmulas mencionadas anteriormente para obtener el valor de la energía potencial en el sistema.
 
 La energía potencial tiene numerosas aplicaciones en diversas áreas. Algunos ejemplos incluyen:
 
