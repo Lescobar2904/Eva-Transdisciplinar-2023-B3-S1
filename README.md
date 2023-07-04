@@ -1,11 +1,10 @@
 # Eva-Transdisciplinar-2023-B3-S1
-
-##Video explicatorio del programa
-
-Enlace: https://drive.google.com/file/d/106aChVP42BlyFJQpJlSTN_bcrZT7JeAm/view?usp=sharing
-
  
 ## Descripción
+
+Video explicatorio del programa:  https://drive.google.com/file/d/106aChVP42BlyFJQpJlSTN_bcrZT7JeAm/view?usp=sharing
+
+
 Este proyecto consiste en una simulación de la Energía Potencial Gravitacional utilizando Python, junto con las bibliotecas tkinter, matplotlib, numpy y pygame.
 
 La Energía Potencial Gravitacional es un concepto fundamental en la física, descubierto por Isaac Newton en el siglo XVII. Esta energía se refiere a la capacidad de un objeto para realizar trabajo debido a su posición relativa a un punto de referencia y a la fuerza gravitacional.
