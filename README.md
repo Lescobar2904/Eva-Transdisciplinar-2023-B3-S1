@@ -70,6 +70,17 @@ Matplotlib.animation nos brinda herramientas para crear animaciones en Python. P
 
 ## Guia de Instalacion 
 
+Descarga el archivo zip del proyecto accediendo a este enlace: https://drive.google.com/file/d/1NUQfp1d0nZic1Fp37Q-_lP4BRSElu62a/view?usp=sharing
+
+descomprime el archivo zip 
+
+ejecuta el programa 'proyefinal.exe'
+
+
+
+
+## Si deseas descargarlo y ejecutarlo en Visual Studio Code.
+
 Sigue estos pasos para instalar y ejecutar la simulación de Energía Potencial Gravitacional en tu entorno local:
 
 Asegúrate de tener instalado lo siguiente en tu sistema:
