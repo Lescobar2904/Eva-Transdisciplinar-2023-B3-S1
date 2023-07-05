@@ -2,8 +2,7 @@
  
 ## Descripción
 
-Video explicatorio del programa: https://drive.google.com/file/d/106aChVP42BlyFJQpJlSTN_bcrZT7JeAm/view?usp=sharing
-
+Video explicatorio del programa: https://drive.google.com/file/d/1uFHP7nPHxGWsp1IXlLX5r9WEi5qaVvo6/view?usp=sharing
 
 Este proyecto consiste en una simulación de la Energía Potencial Gravitacional utilizando Python, junto con las bibliotecas tkinter, matplotlib, numpy y pygame.
 
